@@ -1,15 +1,20 @@
 package org.calmarj.ecosaratov;
 
-import com.activeandroid.ActiveAndroid;
+import com.activeandroid.app.Application;
+import com.parse.Parse;
+import com.parse.ParseObject;
 
-/**
- * Created by calmarj on 24.12.15.
- */
-public class MyApplication extends com.activeandroid.app.Application {
+import org.calmarj.ecosaratov.model.Place;
+
+public class MyApplication extends Application {
 
     @Override
     public void onCreate() {
         super.onCreate();
-        ActiveAndroid.initialize(this);
+
+        ParseObject.registerSubclass(Place.class);
+        Parse.initialize(this);
+
+
     }
 }

@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">EcoSaratov</string>
     <string name="title_activity_maps">Map</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="beatiful_places_string">Красивые места Саратова</string>
+    <string name="problem_places_string">Проблемные места Саратова</string>
 </resources>

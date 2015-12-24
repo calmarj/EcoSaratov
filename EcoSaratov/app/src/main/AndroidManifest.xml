@@ -9,9 +9,12 @@
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
 
     <application
-        android:name="com.activeandroid.app.Application"
+        android:name="org.calmarj.ecosaratov.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -29,21 +32,28 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
-
         <meta-data
             android:name="AA_DB_NAME"
             android:value="problems.db" />
+
+        <!--parse-->
         <meta-data
-            android:name="AA_DB_VERSION"
-            android:value="1" />
+            android:name="com.parse.APPLICATION_ID"
+            android:value="uGflPQGX03aLH2lDmwoEOVQFWyYpMbLICLKK6YxG" />
         <meta-data
-            android:name="AA_MODELS"
-            android:value="org.calmarj.ecosaratov.model.Problem" />
+            android:name="com.parse.CLIENT_KEY"
+            android:value="RCTmTOvML0X51XNKD4bsyDE9gfpWkghXizMiXCxA" />
 
 
         <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps">
+
+        </activity>
+        <activity
+            android:name=".WelcomeActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
