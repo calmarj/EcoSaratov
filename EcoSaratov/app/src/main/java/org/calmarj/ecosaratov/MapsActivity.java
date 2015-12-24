@@ -1,7 +1,7 @@
 package org.calmarj.ecosaratov;
 
-import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -11,6 +11,8 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
+
+    public static final String TAG = MapsActivity.class.getName();
 
     private GoogleMap mMap;
 
@@ -28,8 +30,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
+        mMap.setMapType(GoogleMap.MAP_TYPE_TERRAIN);
         LatLng saratov = new LatLng(51, 45);
         mMap.addMarker(new MarkerOptions().position(saratov).title("Маркер в Саратове"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(saratov));
+
+
     }
+
+
 }
