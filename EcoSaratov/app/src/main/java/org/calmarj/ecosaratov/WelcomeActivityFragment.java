@@ -26,19 +26,22 @@ public class WelcomeActivityFragment extends Fragment {
         mProblemPlacesButton = (Button) view.findViewById(R.id.problem_places_button);
 
         mBeautifulPlacesButton.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getContext(), MapsActivity.class);
-                intent.putExtra("TYPE", "beautiful");
+                intent.putExtra(MapsActivity.PLACE_TYPE_TAG, MapsActivity.BEAUTIFUL_PLACE_TYPE);
+
                 startActivity(intent);
             }
+
         });
 
         mProblemPlacesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getContext(), MapsActivity.class);
-                intent.putExtra("TYPE", "problem");
+                intent.putExtra(MapsActivity.PLACE_TYPE_TAG, MapsActivity.PROBLEM_PLACE_TYPE);
                 startActivity(intent);
             }
         });

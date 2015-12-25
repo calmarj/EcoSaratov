@@ -1,6 +1,7 @@
 package org.calmarj.ecosaratov;
 
-import com.activeandroid.app.Application;
+import android.app.Application;
+
 import com.parse.Parse;
 import com.parse.ParseObject;
 
